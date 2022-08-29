@@ -30,26 +30,26 @@
 
 
 # 3
-def drawing(n):
-    if n == 0:
-        return
-
-    print('*' * n)      # pre-action
-    drawing(n-1)        # recursive call
-    print('#' * n)      # !!!post-action!!! izpylnqva se na vryshtane sled prikliuchvane na rekursiqta
-
-
-number = int(input())
-drawing(number)
+# def drawing(n):
+#     if n == 0:
+#         return
 #
-# ****
-# ***
-# **
-# *
+#     print('*' * n)      # pre-action
+#     drawing(n-1)        # recursive call
+#     print('#' * n)      # !!!post-action!!! izpylnqva se na vryshtane sled prikliuchvane na rekursiqta
+#
+#
+# number = int(input())
+# drawing(number)
 # #
-# ##
-# ###
-# ####
+# # ****
+# # ***
+# # **
+# # *
+# # #
+# # ##
+# # ###
+# # ####
 
 
 # 4
