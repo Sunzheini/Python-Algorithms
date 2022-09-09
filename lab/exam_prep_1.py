@@ -42,17 +42,48 @@
 # -----------------------------------------------------------------------------
 # 2
 
-
-
-
-
-
 # Task Input:
 # 13 42 69 73 42 84 26
 # 13 54 73 42 8 15 29
 
 # -----------------------------------------------------------------------------
 # 3
+class Edge:
+    def __init__(self, first, second, distance):
+        self.first = first
+        self.second = second
+        self.distance = distance
+
+    def __gt__(self, other):
+        return self.distance > other.distance
+
+
+nodes = int(input())
+edges = int(input())
+lightnings = int(input())
+
+graph = {node: [] for node in range(nodes)}
+
+for _ in range(edges):
+    first, second = distance = [int(x) for x in input().split()]
+    edge = Edge(first, second, distance)
+    graph[first].append(edge)
+    graph[second].append(edge)
+
+for _ in range(lightnings):
+    node, damage = [int(x) for x in input().split()]
+    print(node, damage, graph)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
